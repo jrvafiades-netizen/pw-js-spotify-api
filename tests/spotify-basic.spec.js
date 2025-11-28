@@ -27,7 +27,7 @@ test.describe('Spotify Basic API Tests', () => {
 
   test('Get a track by ID', async ({ token }) => {
     const spotify = new SpotifyClient(token);
-    const trackId = '7lEptt4wbM0yJTvSG5EBof'; // "Time Bomb"
+    const trackId = '56hwcJKj0M40A3qdhV3177'; // "Time Bomb"
 
     const response = await spotify.getTrack(trackId);
 

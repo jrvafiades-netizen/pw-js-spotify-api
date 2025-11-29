@@ -24,6 +24,13 @@ export class SpotifyClient {
     });
   }
 
+  async searchTracks(query) {
+    return axios.get('https://api.spotify.com/v1/search', {
+      headers: { Authorization: `Bearer ${this.token}` },
+      params: { q: query, type: 'track', limit: 5 }
+    });
+  }
+
   async createPlaylist(userId, playlistData) {
     return axios.post(`https://api.spotify.com/v1/users/${userId}/playlists`, playlistData, {
       headers: { Authorization: `Bearer ${this.token}` }
@@ -39,6 +46,12 @@ export class SpotifyClient {
 
   async deletePlaylist(playlistId) {
     return axios.delete(`https://api.spotify.com/v1/playlists/${playlistId}/followers`, {
+      headers: { Authorization: `Bearer ${this.token}` }
+    });
+  }
+
+  async getPlaylistTracks(playlistId) {
+    return axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
       headers: { Authorization: `Bearer ${this.token}` }
     });
   }

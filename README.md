@@ -1,4 +1,5 @@
-# pw-js-spotify-api
+# Playwright-javascript-API-and-UI-tests
+
 1. API tests on the Spotify API using PlayWright with JavaScript 
     - login via OAuth
     - verify basic API functions, incl searching for artists and tracks

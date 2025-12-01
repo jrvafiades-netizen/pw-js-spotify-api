@@ -13,7 +13,7 @@ test('Verify myself on the IBJJF Rankings website', async ({ page }) => {
   const coolGuyAdam = page.getByRole('link', { name: 'Adam Wardziński' });
   await coolGuyAdam.waitFor({ state: 'hidden' });
 
-  console.log('Search for myself, James Vafiades, on the IBJJF Rankings website');
+  console.log('Search for myself on the IBJJF Rankings website');
   await page.getByRole('textbox', { name: 'Search Within Division' }).fill('James Vafiades');
   await page.getByRole('textbox', { name: 'Search Within Division' }).press('Enter');
   await page.getByRole('link', { name: 'James Vafiades' }).click();

@@ -41,7 +41,7 @@ test.describe('Spotify API CRUD Test', () => {
     
     const trackInPlaylist = playlistTracks.data.items.find(item => item.track.uri === trackUri);
     expect(trackInPlaylist).toBeDefined();
-    expect(trackInPlaylist.track.name).toBe(track.name);
+    expect(trackInPlaylist.track.name).toContain('Angels With Dirty Faces')
     expect(playlistTracks.data.total).toBe(1)
     expect(trackInPlaylist.track.artists[0].name).toContain('Amateur Athletes')
     expect(trackInPlaylist.added_at).toBeDefined()

@@ -11,7 +11,7 @@
     - verifies academy name and social media links
     - expands medals section and verifies recent competition medals
 
-3. next project will be mobile testing
+3. next project will be mobile testing + AI self healing selectors
 
 ## Setup
 
